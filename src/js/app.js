@@ -1,15 +1,27 @@
 const regularPurchases = 2000;
 const regularPurchasesPercent = 0.01;
 
-const increasedPurchases = 10000;
+const increasedPurchases = 5000;
 const increasedPurchasesPercent = 0.05;
 
-const specialPurchase = 100;
-const specialPurchasePercent = 0.03;
+const specialPurchases = 9000;
+const specialPurchasesPercent = 0.3;
 
-let cashback = regularPurchases * regularPurchasesPercent + increasedPurchases * increasedPurchasesPercent + specialPurchase * specialPurchasePercent;
-const cashbackLimit = 3000;
-if (cashback > cashbackLimit) {
-    cashback = 2000;
+let cashback = 0;
+let cashbackLimit = 3000;
+
+let category = {
+    regular: regularPurchases * regularPurchasesPercent,
+    increased: increasedPurchases * increasedPurchasesPercent,
+    special: specialPurchases * specialPurchasesPercent
+};
+
+for (let purchase in category) {
+    cashback += category[purchase];
 }
-console.log(cashback);
+
+if (cashback >= cashbackLimit) {
+    console.log(3000);
+} else {
+    console.log(cashback);
+}
