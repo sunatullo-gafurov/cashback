@@ -24,7 +24,7 @@ let purchases = [
         category: REGULAR_PURCHASE
     },
     {
-        amount: 5000,
+        amount: 50000,
         category: SPECIAL_PURCHASE
     }
 ]
@@ -40,7 +40,8 @@ for (let purchase of purchases) {
 }
 
 if (cashback >= cashbackLimit) {
-    console.log(3000);
+    cashback = cashbackLimit;
+    console.log(cashback);
 } else {
     console.log(cashback);
 }
