@@ -30,12 +30,12 @@ let purchases = [
 ]
 
 for (const purchase of purchases) {
-    if (purchase["category"] === REGULAR_PURCHASE) {
-        cashback += purchase["amount"] * REGULAR_PERCENT;
-    } else if (purchase["category"] === INCREASED_PURCHASE) {
-        cashback += purchase["amount"] * INCREASED_PERCENT;
-    } else if (purchase["category"] === SPECIAL_PURCHASE) {
-        cashback += purchase["amount"] * SPECIAL_PERCENT;
+    if (purchase.category === REGULAR_PURCHASE) {
+        cashback += purchase.amount * REGULAR_PERCENT;
+    } else if (purchase.category === INCREASED_PURCHASE) {
+        cashback += purchase.amount * INCREASED_PERCENT;
+    } else if (purchase.category === SPECIAL_PURCHASE) {
+        cashback += purchase.amount * SPECIAL_PERCENT;
     }
 }
 
