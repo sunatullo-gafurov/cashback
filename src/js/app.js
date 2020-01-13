@@ -41,7 +41,6 @@ for (const purchase of purchases) {
 
 if (cashback >= cashbackLimit) {
     cashback = cashbackLimit;
-    console.log(cashback);
-} else {
-    console.log(cashback);
 }
+
+console.log(cashback);
