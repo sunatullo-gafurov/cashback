@@ -24,12 +24,12 @@ let purchases = [
         category: REGULAR_PURCHASE
     },
     {
-        amount: 50000,
+        amount: 5000,
         category: SPECIAL_PURCHASE
     }
 ]
 
-for (let purchase of purchases) {
+for (const purchase of purchases) {
     if (purchase["category"] === REGULAR_PURCHASE) {
         cashback += purchase["amount"] * REGULAR_PERCENT;
     } else if (purchase["category"] === INCREASED_PURCHASE) {
